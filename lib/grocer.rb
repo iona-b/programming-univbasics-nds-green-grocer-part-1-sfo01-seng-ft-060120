@@ -1,5 +1,3 @@
-require 'pry'
-
 def find_item_by_name_in_collection(name, collection)
   collection.each do |key|
     key.each do |item, item_name|
@@ -17,23 +15,10 @@ def consolidate_cart(cart)
     unless receipt.include?(item_details)
       receipt << item_details
       item_details[:count] = 1
-      #binding.pry
     else
       item_details[:count] += 1
     end
   end
-      
-    #item_details[:count] = 1
-    #item_details.each do |attribute, data|
-      #binding.pry
-      #if receipt.include?(item_details)
-        #receipt[:count] ++ 1
-      #else
-        #receipt << item_details
-      #end
-    #end
-  #end
-  #return receipt
 end
 
 
