@@ -13,18 +13,22 @@ end
 
 def consolidate_cart(cart)
   receipt = []
-  cart.each do |item_overview|
-    item_overview[:count] = 1
-    item_overview.each do |attribute, data|
-      binding.pry
-      if receipt.include?(item_overview)
-        receipt[:count] ++ 1
-      else
-        receipt << item_overview
-      end
+  cart.each do |item_details|
+    if receipt.include?(item_details)
     end
   end
-  return receipt
+      
+    #item_details[:count] = 1
+    #item_details.each do |attribute, data|
+      #binding.pry
+      #if receipt.include?(item_details)
+        #receipt[:count] ++ 1
+      #else
+        #receipt << item_details
+      #end
+    #end
+  #end
+  #return receipt
 end
 
 
