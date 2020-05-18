@@ -17,9 +17,9 @@ def consolidate_cart(cart)
     unless receipt.include?(item_details)
       receipt << item_details
       item_details[:count] = 1
-      binding.pry
+      #binding.pry
     else
-      item_details[:count] ++ 1
+      item_details[:count] += 1
     end
   end
       
