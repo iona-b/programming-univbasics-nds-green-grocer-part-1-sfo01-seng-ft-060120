@@ -14,8 +14,8 @@ end
 def consolidate_cart(cart)
   receipt = []
   cart.each do |item_details|
-    if receipt.include?(item_details)
-      binding.pry
+    #if receipt.include?(item_details)
+      #binding.pry
     end
   end
       
