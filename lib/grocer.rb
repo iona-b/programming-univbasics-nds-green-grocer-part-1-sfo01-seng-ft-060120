@@ -15,6 +15,8 @@ def consolidate_cart(cart)
   receipt = []
   cart.each do |item_overview|
     item_overview[:count] = 1
+    item_overview.each do |attribute, data|
+      if receipt item_overview[:name]
   end
   cart.each do |item_overview|
     receipt.each do |items|
