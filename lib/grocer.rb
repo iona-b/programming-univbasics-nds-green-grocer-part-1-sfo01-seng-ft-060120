@@ -16,16 +16,11 @@ def consolidate_cart(cart)
   cart.each do |item_overview|
     item_overview[:count] = 1
     item_overview.each do |attribute, data|
-      if receipt item_overview[:name]
-  end
-  cart.each do |item_overview|
-    receipt.each do |items|
-      binding.pry
-      #if items[:item] == item_overview[:item]
-        #item_overview[:count] ++1
-      #else
-        #receipt << item_overview
-      #end
+      if receipt.include?(item_overview[:item])
+        receipt[:count] ++ 1
+      else
+        receipt << item_overview
+      end
     end
   end
 end
