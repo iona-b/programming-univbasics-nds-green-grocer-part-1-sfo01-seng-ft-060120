@@ -17,7 +17,7 @@ def consolidate_cart(cart)
     item_overview[:count] = 1
   end
   cart.each do |item_overview|
-    receipt.each |items| do
+    receipt.each do |items|
       binding.pry
       #if items[:item] == item_overview[:item]
         #item_overview[:count] ++1
